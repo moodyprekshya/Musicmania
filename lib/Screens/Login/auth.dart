@@ -79,22 +79,13 @@ class _AuthScreenState extends State<AuthScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      TextButton(
-                        onPressed: () async {
-                          await restore(context);
-                          GetIt.I<MyTheme>().refresh();
-                          Navigator.popAndPushNamed(context, '/');
-                        },
-                        child: Text(
-                          AppLocalizations.of(context)!.restore,
-                        ),
-                      ),
+                    
                       TextButton(
                         onPressed: () async {
                           await _addUserData(
                             AppLocalizations.of(context)!.guest,
                           );
-                          Navigator.popAndPushNamed(context, '/pref');
+                          Navigator.popAndPushNamed(context, '/');
                         },
                         child: Text(
                           AppLocalizations.of(context)!.skip,
@@ -117,7 +108,7 @@ class _AuthScreenState extends State<AuthScreen> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Tune 360',
+                                  'Music Mania',
                                   style: TextStyle(
                                     height: 0.10,
                                     fontSize: 50,
@@ -203,11 +194,11 @@ class _AuthScreenState extends State<AuthScreen> {
                                         controller.text.trim(),
                                       );
                                       Navigator.popAndPushNamed(
-                                          context, '/pref');
+                                          context, '/');
                                     } else {
                                       // await _addUserData('Guest');
                                       // Navigator.popAndPushNamed(
-                                      //     context, '/pref');
+                                      //     context, '/');
                                     }
                                   },
                                   child: Container(
@@ -241,30 +232,7 @@ class _AuthScreenState extends State<AuthScreen> {
                                     ),
                                   ),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                    vertical: 20.0,
-                                  ),
-                                  child: Column(
-                                    children: [
-                                      Row(
-                                        children: [
-                                          Text(
-                                            AppLocalizations.of(context)!
-                                                .disclaimer,
-                                          ),
-                                        ],
-                                      ),
-                                      Text(
-                                        AppLocalizations.of(context)!
-                                            .disclaimerText,
-                                        style: TextStyle(
-                                          color: Colors.grey.withOpacity(0.7),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
+                            
                               ],
                             ),
                           ],

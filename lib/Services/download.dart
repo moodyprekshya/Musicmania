@@ -431,7 +431,7 @@ class Download with ChangeNotifier {
           genre: data['language'].toString(),
           year: data['year'].toString(),
           lyrics: lyrics,
-          comment: 'Tune 360',
+          comment: 'Music Mania',
         );
         if (Platform.isAndroid) {
           try {

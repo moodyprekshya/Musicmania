@@ -209,7 +209,7 @@ class _MyAppState extends State<MyApp> {
     ]);
 
     return MaterialApp(
-      title: 'Tune 360',
+      title: 'Music Mania',
       restorationScopeId: 'tune_360',
       debugShowCheckedModeBanner: false,
       themeMode: AppTheme.themeMode,
